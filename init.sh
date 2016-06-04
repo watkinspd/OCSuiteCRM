@@ -22,6 +22,10 @@ if [ -z "$DATABASE_NAME" ]; then
 	export DATABASE_NAME=$MYSQL_DATABASE
 fi
 
+if [ -z "$DB_TYPE" ]; then
+	export DB_TYPE=$MYSQL_VERSION
+fi
+
 /usr/local/bin/envtemplate.py -i /usr/local/src/config_override.php.pyt -o /var/www/html/config_override.php
 /usr/sbin/cron
 
