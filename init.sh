@@ -3,11 +3,11 @@
 set -e
 
 if [ -z "$DB_HOST_NAME" ]; then
-	export DB_HOST_NAME=$MYSQL_PORT_3306_TCP_ADDR
+	export DB_HOST_NAME=$MYSQL_SERVICE_HOST
 fi
 
 if [ -z "$DB_TCP_PORT" ]; then
-	export DB_TCP_PORT=$MYSQL_PORT_3306_TCP_PORT
+	export DB_TCP_PORT=$MYSQL_SERVICE_PORT
 fi
 
 if [ -z "$DB_USER_NAME" ]; then
