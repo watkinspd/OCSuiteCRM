@@ -7,6 +7,13 @@ ENV EXTRACT_FOLDER SuiteCRM-7.6.4
 ENV WWW_FOLDER /var/www/html
 ENV WWW_USER www-data
 ENV WWW_GROUP www-data
+ENV DB_TCP_PORT $MYSQL_PORT_3306_TCP_PORT
+ENV DB_USER_NAME $MYSQL_USER
+ENV DB_PASSWORD $MYSQL_PASSWORD
+ENV DB_HOST_NAME $MYSQL_PORT_3306_TCP_ADDR
+ENV DB_MANAGER MysqlManager
+ENV DB_TYPE mysql
+
 
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y libcurl4-gnutls-dev libpng-dev libssl-dev libc-client2007e-dev libkrb5-dev unzip cron re2c python tree && \
