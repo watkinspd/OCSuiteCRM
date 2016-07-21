@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM docker.io/library/php:5.6-apache
 
 # SugarCRM 7.21 MAX
 ENV DOWNLOAD_URL http://iweb.dl.sourceforge.net/project/suitecrm/SuiteCRM-7.6.6.zip
