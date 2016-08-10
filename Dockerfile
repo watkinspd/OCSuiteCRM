@@ -42,5 +42,7 @@ RUN chmod a+x /usr/local/bin/envtemplate.py
 ADD crons.conf /root/crons.conf
 RUN crontab /root/crons.conf
 
+USER ${WWW_USER}
+
 EXPOSE 80
 ENTRYPOINT ["/usr/local/bin/init.sh"]
