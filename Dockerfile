@@ -1,9 +1,9 @@
-FROM docker.io/library/php:5.6-apache
+FROM php:5.6-apache
 
 # SugarCRM 7.21 MAX
-ENV DOWNLOAD_URL http://iweb.dl.sourceforge.net/project/suitecrm/SuiteCRM-7.6.6.zip
-ENV DOWNLOAD_FILE SuiteCRM-7.6.6.zip
-ENV EXTRACT_FOLDER SuiteCRM-7.6.6
+ENV DOWNLOAD_URL https://suitecrm.com/component/dropfiles/?task=frontfile.download&id=105
+ENV DOWNLOAD_FILE SuiteCRM-7.7.zip
+ENV EXTRACT_FOLDER SuiteCRM-7.7
 ENV WWW_FOLDER /var/www/html
 ENV WWW_USER www-data
 ENV WWW_GROUP www-data
