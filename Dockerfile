@@ -28,8 +28,8 @@ RUN curl "${DOWNLOAD_URL}" > $DOWNLOAD_FILE && \
   rm -rf ${WWW_FOLDER}/* && \
   cp -R ${EXTRACT_FOLDER}/* ${WWW_FOLDER}/
 
-RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}/*
 RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}
+RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}/*
 
 ADD php.ini /usr/local/etc/php/php.ini
 ADD config_override.php.pyt /usr/local/src/config_override.php.pyt
