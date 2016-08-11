@@ -30,10 +30,7 @@ if [ -z "$DB_MANAGER" ]; then
 	export DB_MANAGER="MysqlManager"
 fi
 
-#ls -l /var/www/html/config_override.php
-#whoami
-
-#/usr/local/bin/envtemplate.py -i /usr/local/src/config_override.php.pyt -o /var/www/html/config_override.php
+/usr/local/bin/envtemplate.py -i /usr/local/src/config_override.php.pyt -o /var/www/html/config_override.php
 /usr/sbin/cron
 
 # Remove Apache PID lock file so apache can start next time
