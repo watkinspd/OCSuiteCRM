@@ -44,12 +44,7 @@ RUN touch ${WWW_FOLDER}/config_override.php
 
 RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}
 RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}/*
-RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}/config_override.php
-
-RUN ls -l ${WWW_FOLDER}/config_override.php
 
 EXPOSE 80
-
-USER ${WWW_USER}
 
 ENTRYPOINT ["/usr/local/bin/init.sh"]
