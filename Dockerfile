@@ -40,9 +40,10 @@ RUN chmod a+x /usr/local/bin/init.sh && \
 ADD crons.conf /root/crons.conf
 RUN crontab /root/crons.conf
 
+RUN touch ${WWW_FOLDER}/config_override.php
+
 RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}
 RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}/*
-RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}/config_override.php
 
 USER ${WWW_USER}
 
