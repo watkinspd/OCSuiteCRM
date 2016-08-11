@@ -2,8 +2,8 @@ FROM php:5.6-apache
 
 # SugarCRM 7.21 MAX
 ENV DOWNLOAD_URL https://suitecrm.com/component/dropfiles/?task=frontfile.download&id=105
-ENV DOWNLOAD_FILE SuiteCRM-7.7.zip
-ENV EXTRACT_FOLDER SuiteCRM-7.7
+ENV DOWNLOAD_FILE SuiteCRM-7.7.1.zip
+ENV EXTRACT_FOLDER SuiteCRM-7.7.1
 ENV WWW_FOLDER /var/www/html
 ENV WWW_USER www-data
 ENV WWW_GROUP www-data
