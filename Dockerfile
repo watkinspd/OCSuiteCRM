@@ -42,6 +42,7 @@ RUN crontab /root/crons.conf
 
 RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}
 RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}/*
+RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}/config_override.php
 
 USER ${WWW_USER}
 
