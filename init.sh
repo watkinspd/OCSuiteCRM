@@ -31,7 +31,7 @@ if [ -z "$DB_MANAGER" ]; then
 fi
 
 /usr/local/bin/envtemplate.py -i /usr/local/src/config_override.php.pyt -o /var/www/html/config_override.php
-/usr/sbin/cron
+#/usr/sbin/cron
 
 # Remove Apache PID lock file so apache can start next time
 rm -f /run/apache2/apache2.pid
