@@ -46,7 +46,7 @@ RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}
 #RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}/*
 RUN chmod -R g+rwx ${WWW_FOLDER}
 RUN touch /run/apache2/apache2.pid
-RUN chmod g+rwx /run/apache2/apache2.pid
+RUN chmod -R g+rwx /run/apache2
 
 EXPOSE 80
 
