@@ -45,6 +45,7 @@ RUN touch ${WWW_FOLDER}/config_override.php
 RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}
 #RUN chown -R ${WWW_USER}:${WWW_GROUP} ${WWW_FOLDER}/*
 RUN chmod -R g+rwx ${WWW_FOLDER}
+RUN touch /run/apache2/apache2.pid
 RUN chmod g+rwx /run/apache2/apache2.pid
 
 EXPOSE 80
